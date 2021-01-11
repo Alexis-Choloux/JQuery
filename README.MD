@@ -6,6 +6,7 @@ Rendez vous à l'intérieur du répertoire exo-1.
 
 1. En haut du fichier `script.js`, écrivez un commentaire qui explique la différence entre Javascript et jQuery ( c'est fondamental de comprendre avant d'aller plus loin ! ). Pour vous aider, cette [vidéo](http://learn.onemonth.com/jquery-vs-javascript/) est très bien.
 2. Pour pouvoir utiliser jQuery nous devons l'ajouter en tant que librarie externe dans notre application. Ajouter donc une balise `script` qui permet d'inclure jQuery. Où placer vous cette balise script par rapport à la balise existante `<script src="script.js"></script>` et pourquoi ?
+<!-- on la place avant pour qu'elle soit prise en compte par le fichier .js -->
 3. Vérifier que vous avez bien ajouté la librarie en insérant le code ci-dessous et assurez-vous que le message s'affiche dans la console de votre navigateur.
 
 ```
@@ -17,6 +18,7 @@ $(document).ready(function(){
 4. Commenter les lignes de codes ci dessous.
 5. En quoi cette ligne est indispensable ?
 6. Quel symbole permet de repérer dans un programme Javascript que du jQuery est utilisé ? (attention, ce n'est pas toujours le cas...)
+<!-- le signe $ -->
 
 ## Exercice 2 : Je sélectionne, tu sélectionnes, il sélectionne, nous sélectionnons...
 
@@ -24,6 +26,7 @@ JQuery nous sert à manipuler des éléments de la page HTML : les modifier, en 
 Afin de faire une opération sur un élément, nous devons être en capacité de dire en Javascript comment le sélectionner : c'est le but des sélecteurs.
 
 1. Il existe trois principaux types de sélecteurs en jQuery, lesquels ?
+<!-- Element Selecor : $("p") // #id selector : $("#test") // .class selector : $(".test") -->
 2. Dans le répertoire exo-2, vous trouverez une page HTML qui utilise la librairie Bootstrap. Dans le fichier `script.js`, écrivez des sélecteurs permettant de sélectionner les éléments suivants ( un sélecteur par ligne ) : Par exemple, si je dis sélectionner tous les éléments `h4` de la page, le sélecteur associé est : `$('h4')`.
    1. Sélectionner le titre du blog : "John's Blog".
    2. Sélectionner tous les éléments du sidemenu de gauche.
