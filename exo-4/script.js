@@ -10,15 +10,22 @@ $("#myNavbar ul:first li:last").dblclick(function(){
     $(this).hide();
 });
 
-let article = 1;
 
-$("img").click(function() {
-    $(".navbar-right li:last a").replaceWith("<a href='#'><span class='glyphicon glyphicon-shopping-cart'></span> Cart (" + article++ + ")</a>");
+$("img").click( event => {
+    let text = $(event.currentTarget).parent().next()[0].innerText;
+    text = text.split(" ")[1];
+    $(".navbar-right li:last a").replaceWith("<a href='#'><span class='glyphicon glyphicon-shopping-cart'></span> Cart (" + text + ")</a>");
 });
 
+// $("img").click(function() {
+//     $(".navbar-right li:last a").replaceWith("<a href='#'><span class='glyphicon glyphicon-shopping-cart'></span> Cart (" + article++ + ")</a>");
+// });
+
 $(".panel").each(function() {
-    $(this).mouseenter(function(){
-        console.log("L'utilisateur regarde : " + $(".panel-footer", this).html());
+    $(this).mouseenter( event => {
+        let text = $(event.currentTarget).parent()[0].innerText;
+        text = text.split(" ").pop();
+        console.log("L'utilisateur regarde : " + text);
     });
     $(this).mouseleave(function(){
         console.clear();
@@ -26,8 +33,8 @@ $(".panel").each(function() {
 })
 
 $("input[type='email'").click(function() {
-    console.log("L'utilisateut vient de cliquer sur le formulaire");
-    
+    console.log("L'utilisateur vient de cliquer sur le formulaire");
+
     $(this).on("input", function() {
     console.clear();
     console.log("L'utilisateur est en train de taper : " + this.value);
